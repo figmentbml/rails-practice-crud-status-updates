@@ -1,0 +1,20 @@
+<%= form_for (@update) do |f| %>
+
+<% if @update.errors.present? %>
+  <% @update.errors.full_messages.each do |message| %>
+  <%= message %>
+  <% end %>
+<% end %>
+
+<%= f.label :status %>
+<%= f.text_area :status %>
+
+<%= f.label :user %>
+<%= f.text_field :user %>
+
+<%= f.label :number_of_likes %>
+<%= f.number_field :number_of_likes %>
+
+<%= f.submit %>
+
+<% end %>

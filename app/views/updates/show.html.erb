@@ -1,0 +1,10 @@
+<br/>
+Status: <%= @update.status %>
+<br/>
+User: <%= @update.user %>
+<br/>
+Number of likes: <%= @update.number_of_likes %>
+<br/>
+<%= link_to "Edit", edit_update_path(@update) %>
+<br/>
+<%= link_to "Delete", update_path(@update), method: :delete %>

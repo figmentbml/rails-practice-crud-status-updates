@@ -1,0 +1,36 @@
+
+<br/>
+Status Updates
+<br/>
+<%= link_to "Create Status Update", new_update_path %>
+
+<table>
+  <head>
+    <tr>
+      <td>
+        Status
+      </td>
+      <td>
+        User
+      </td>
+      <td>
+        Number of Likes
+      </td>
+    </tr>
+  </head>
+  <tbody>
+    <% @updates.each do |update| %>
+    <tr>
+      <td>
+        <%= update.status %>
+      </td>
+      <td>
+        <%= update.user %>
+      </td>
+      <td>
+        <%= update.number_of_likes %>
+      </td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
